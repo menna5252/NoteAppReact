@@ -69,12 +69,12 @@ export default function Register() {
       <h1 className="text-3xl font-bold text-blue-900 text-center ">
         Register
       </h1>
-      <Alert status="danger">
+      {error && <Alert status="danger">
         <Alert.Indicator />
         <Alert.Content>
           <Alert.Title>{error}</Alert.Title>
          </Alert.Content>
-      </Alert>
+      </Alert>}
       <form className="my-4 space-y-4" onSubmit={handleSubmit(submitForm)}>
         <TextField isInvalid={Boolean(errors?.name)} className={"w-full"} name="name" aria-label="name">
           <InputGroup
